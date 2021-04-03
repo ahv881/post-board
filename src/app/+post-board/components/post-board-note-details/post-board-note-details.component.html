@@ -1,0 +1,9 @@
+<div class="flex flex-col h-full justify-between">
+  <p class="py-1 px-2 w-full border">A note from <span class="underline text-blue-700">{{note.author}}</span></p>
+  <p class="overflow-auto my-2 flex-1">{{note.content}}</p>
+  <div class="flex justify-end ">
+    <button class="ml-3 py-1 px-3 hover:bg-gray-200 focus:outline-none border rounded" (click)="remove()">remove</button>
+    <button class="ml-3 py-1 px-3 hover:bg-gray-200 focus:outline-none border rounded" (click)="edit()">edit</button>
+    <button class="ml-3 py-1 px-3 hover:bg-gray-200 focus:outline-none border rounded" (click)="close()">close</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="flex flex-col w-full h-48 p-3 border rounded relative cursor-pointer" (click)="noteClick.emit()">
+  <ng-container *ngIf="note; else newNote">
+    <p class="absolute -top-3 px-3 bg-white">{{note?.author}}</p>
+    <button class="absolute -top-5 -right-3 p-2 bg-white focus:outline-none" (click)="handleRemove($event)">X</button>
+
+    <p class="line-clamp-7">{{note?.content}}</p>
+  </ng-container>
+
+  <ng-template #newNote>
+    <p class="absolute -top-3 px-3 bg-white">Add new note</p>
+  </ng-template>
+</div>

@@ -1,0 +1,20 @@
+<div class="w-full h-full mt-6">
+  <form class="flex flex-col mx-auto w-1/4" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>login</mat-label>
+      <input matInput formControlName="login">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>password</mat-label>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field>
+
+
+    <p>Hint: try '123456' password</p>
+
+    <button class="py-1 px-3 hover:bg-gray-200 focus:outline-none border rounded" (click)="handleSignIn()">login
+    </button>
+  </form>
+
+</div>

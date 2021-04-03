@@ -1,0 +1,21 @@
+<form [formGroup]="form" class="flex flex-col h-full justify-between">
+  <p class="py-1 px-2 w-full border">
+    {{data.note ? 'Edit note' : 'Post a new note' }}
+  </p>
+  <div class="flex flex-col my-6 flex-1 overflow-auto ">
+    <mat-form-field>
+      <mat-label>Author name</mat-label>
+      <input matInput formControlName="author">
+    </mat-form-field>
+
+    <mat-form-field class="flex-1">
+      <mat-label>Note content</mat-label>
+      <textarea matInput formControlName="content"></textarea>
+    </mat-form-field>
+  </div>
+  <div class="flex justify-end">
+    <button class="ml-3 py-1 px-3 hover:bg-gray-200 focus:outline-none border rounded" [disabled]="!form.valid" (click)="saveNote()">save
+    </button>
+    <button class="ml-3 py-1 px-3 hover:bg-gray-200 focus:outline-none border rounded" (click)="close()">cancel</button>
+  </div>
+</form>
